@@ -12,7 +12,7 @@ export default {
     }
   },
   methods: {
-    refuse() {
+    async refuse() {
       this.isError = false;
       if (this.step === 0) {
         this.isLoading = true;
@@ -22,27 +22,27 @@ export default {
           this.step = 1;
         }, 5000)
       } else if (this.step === 1) {
-        this.message = 'Think again!';
-        this.icon = 'https://willvalentine.vercel.app/thnk.gif'
+        await this.message = 'Think again!';
+        await this.icon = 'https://willvalentine.vercel.app/thnk.gif'
         this.step = 2;
       } else if (this.step === 2) {
-        this.message = 'Please be my valentine!';
-        this.icon = 'https://willvalentine.vercel.app/pls.gif'
+        await this.message = 'Please be my valentine!';
+        await this.icon = 'https://willvalentine.vercel.app/pls.gif'
         this.step = 3;
       } else if (this.step === 3) {
-        this.message = 'I am asking last time';
-        this.icon = 'https://willvalentine.vercel.app/last_time.jpg'
+        await this.message = 'I am asking last time';
+        await this.icon = 'https://willvalentine.vercel.app/last_time.jpg'
         this.step = 4;
       } else if (this.step === 4) {
-        this.message = 'Maybe this was all stupid';
-        this.icon = 'https://willvalentine.vercel.app/stupid.jpg'
+        await this.message = 'Maybe this was all stupid';
+        await this.icon = 'https://willvalentine.vercel.app/stupid.jpg'
         this.isShowButtons = false;
       }
     },
     accept_date() {
-      this.icon = 'https://willvalentine.vercel.app/thkn.jpg'
-      this.message = 'We will have a wonderful time with you.';
-      this.isShowButtons = false;
+      await this.icon = 'https://willvalentine.vercel.app/thkn.jpg'
+      await this.message = 'We will have a wonderful time with you.';
+      await this.isShowButtons = false;
       this.generateHearts();
     },
     generateHearts() {
@@ -80,7 +80,7 @@ export default {
         <button
           class="bg-pink-300 text-black pl-[1rem] pr-[1rem] pt-[0.50rem] pb-[0.50rem] min-w-full min-h-half w-full rounded-xl flex items-center justify-center"
           v-if="isLoading" :disabled="isLoading">
-          <img src="http://localhost:5173/src/assets/loading.gif" className="w-5 h-5"></button>
+          <img src="https://willvalentine.vercel.app/loading.gif" className="w-5 h-5"></button>
         <button @click="refuse()"
           class="bg-pink-300 text-black pl-[1rem] pr-[1rem] pt-[0.50rem] pb-[0.50rem] min-w-full min-h-half w-full rounded-xl"
           v-else :disabled="isLoading">
