@@ -7,7 +7,7 @@ export default {
       isError: false,
       isShowButtons: true,
       hearts: [],
-      icon: 'http://localhost:5173/src/assets/date.gif',
+      icon: 'https://willvalentine.vercel.app/src/assets/date.gif',
       message: 'Will you be my valentine?'
     }
   },
@@ -23,24 +23,24 @@ export default {
         }, 5000)
       } else if (this.step === 1) {
         this.message = 'Think again!';
-        this.icon = 'http://localhost:5173/src/assets/thnk.gif'
+        this.icon = 'https://willvalentine.vercel.app/src/assets/thnk.gif'
         this.step = 2;
       } else if (this.step === 2) {
         this.message = 'Please be my valentine!';
-        this.icon = 'http://localhost:5173/src/assets/pls.gif'
+        this.icon = 'https://willvalentine.vercel.app/src/assets/pls.gif'
         this.step = 3;
       } else if (this.step === 3) {
         this.message = 'I am asking last time';
-        this.icon = 'http://localhost:5173/src/assets/last_time.jpg'
+        this.icon = 'https://willvalentine.vercel.app/src/assets/last_time.jpg'
         this.step = 4;
       } else if (this.step === 4) {
         this.message = 'Maybe this was all stupid';
-        this.icon = 'http://localhost:5173/src/assets/stupid.jpg'
+        this.icon = 'https://willvalentine.vercel.app/src/assets/stupid.jpg'
         this.isShowButtons = false;
       }
     },
     accept_date() {
-      this.icon = 'http://localhost:5173/src/assets/thkn.jpg'
+      this.icon = 'https://willvalentine.vercel.app/src/assets/thkn.jpg'
       this.message = 'We will have a wonderful time with you.';
       this.isShowButtons = false;
       this.generateHearts();
