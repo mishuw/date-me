@@ -71,7 +71,7 @@ export default {
       left: heart.left + 'px'
     }">❤️</div>
     <div class="flex flex-col items-center justify-center space-y-2">
-      <img :src="icon" class="w-24 h-24">
+      <img :src="icon" class="w-24 h-24" loading="lazy">
       <h1 class="font-bold text-2xl text-black">{{ message }}</h1>
       <div class="flex flex-row items-center justify-center space-x-5" v-if="isShowButtons">
         <button @click="accept_date()"
@@ -80,7 +80,7 @@ export default {
         <button
           class="bg-pink-300 text-black pl-[1rem] pr-[1rem] pt-[0.50rem] pb-[0.50rem] min-w-full min-h-half w-full rounded-xl flex items-center justify-center"
           v-if="isLoading" :disabled="isLoading">
-          <img src="https://willvalentine.vercel.app/loading.gif" className="w-5 h-5"></button>
+          <img src="https://willvalentine.vercel.app/loading.gif" class="w-5 h-5"></button>
         <button @click="refuse()"
           class="bg-pink-300 text-black pl-[1rem] pr-[1rem] pt-[0.50rem] pb-[0.50rem] min-w-full min-h-half w-full rounded-xl"
           v-else :disabled="isLoading">
