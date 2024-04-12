@@ -39,7 +39,7 @@ export default {
         this.isShowButtons = false;
       }
     },
-    accept_date() {
+    async accept_date() {
       await this.icon = 'https://willvalentine.vercel.app/thkn.jpg'
       await this.message = 'We will have a wonderful time with you.';
       await this.isShowButtons = false;
