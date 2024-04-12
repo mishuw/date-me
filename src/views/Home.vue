@@ -12,7 +12,7 @@ export default {
     }
   },
   methods: {
-    async refuse() {
+    refuse() {
       this.isError = false;
       if (this.step === 0) {
         this.isLoading = true;
@@ -22,28 +22,28 @@ export default {
           this.step = 1;
         }, 5000)
       } else if (this.step === 1) {
-        await this.message = 'Think again!';
-        await this.icon = 'https://willvalentine.vercel.app/thnk.gif'
+        this.message = 'Think again!';
+        this.icon = 'https://willvalentine.vercel.app/thnk.gif'
         this.step = 2;
       } else if (this.step === 2) {
-        await this.message = 'Please be my valentine!';
-        await this.icon = 'https://willvalentine.vercel.app/pls.gif'
+        this.message = 'Please be my valentine!';
+        this.icon = 'https://willvalentine.vercel.app/pls.gif'
         this.step = 3;
       } else if (this.step === 3) {
-        await this.message = 'I am asking last time';
-        await this.icon = 'https://willvalentine.vercel.app/last_time.jpg'
+        this.message = 'I am asking last time';
+        this.icon = 'https://willvalentine.vercel.app/last_time.jpg'
         this.step = 4;
       } else if (this.step === 4) {
-        await this.message = 'Maybe this was all stupid';
-        await this.icon = 'https://willvalentine.vercel.app/stupid.jpg'
+        this.message = 'Maybe this was all stupid';
+        this.icon = 'https://willvalentine.vercel.app/stupid.jpg'
         this.isShowButtons = false;
       }
     },
-    async accept_date() {
-      await this.isError = false;
-      await this.icon = 'https://willvalentine.vercel.app/thkn.jpg'
-      await this.message = 'We will have a wonderful time with you.';
-      await this.isShowButtons = false;
+    accept_date() {
+      this.isError = false;
+      this.icon = 'https://willvalentine.vercel.app/thkn.jpg'
+      this.message = 'We will have a wonderful time with you.';
+      this.isShowButtons = false;
       this.generateHearts();
     },
     generateHearts() {
